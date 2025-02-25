@@ -6,8 +6,8 @@ import { Table } from "./samplePage/Table";
 function App() {
   return (
     <>
-      {/*<Button />*/}
-      {/* <Input></Input> */}
+      {/* <Button /> */}
+      {/* <Input /> */}
       {/* <SelectBox /> */}
       <Table />
     </>

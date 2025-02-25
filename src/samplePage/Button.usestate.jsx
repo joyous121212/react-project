@@ -7,7 +7,7 @@ export const Button = () => {
     <>
       <button onClick={() => setCount((prev) => prev + 1)}>클릭</button>
       <br />
-      count: {count}
+      count의 값: {count}
     </>
   );
 };

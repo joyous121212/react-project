@@ -1,11 +1,11 @@
 import { useState } from "react";
 
 export const SelectBox = () => {
-  const [selectVal, setSelectVal] = useState("a");
+  const [selectVal, setSelectVal] = useState();
 
   return (
     <>
-      <select onChange={(e) => setSelectVal(e.target.value)} defaultValue={selectVal ? selectVal : "c"}>
+      <select onChange={(e) => setSelectVal(e.target.value)} defaultValue={selectVal || "c"}>
         <option value={"a"}>1번</option>
         <option value={"b"}>2번</option>
         <option value={"c"}>3번</option>
@@ -13,7 +13,7 @@ export const SelectBox = () => {
         <option value={"e"}>5번</option>
       </select>
       <br />
-      선택된 값: {selectVal ? selectVal : "c"}
+      선택된 값: {selectVal || "c"}
     </>
   );
 };
