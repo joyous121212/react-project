@@ -3,19 +3,19 @@ import React, { useEffect } from "react";
 export const HeavyJobComponent = ({ num, numObj }) => {
   useEffect(() => {
     console.log("HeavyJobComponent 랜더링");
-  });
+  }, []);
 
   useEffect(() => {
     console.log("num이 바뀌면 heavyPlus가 실행이 돼요.");
     heavyPlus();
-  }, [num]);
+  }, [numObj]);
 
   const heavyPlus = () => {
     let total = 0;
     for (let i = 0; i < 123456; i++) {
-      total += num;
+      total += numObj.num;
     }
-    return total + num;
+    return total + numObj.num;
   };
   const result = heavyPlus();
 
@@ -32,7 +32,7 @@ export const HeavyJobComponent2 = ({ num }) => {
   });
 
   useEffect(() => {
-    console.log("num이 바뀌면 heavyPlus가 실행이 돼요.");
+    console.log("num이 바뀌면 heavyMulti가 실행이 돼요.");
     heavyMulti();
   }, [num]);
 
